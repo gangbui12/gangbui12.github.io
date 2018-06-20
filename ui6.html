@@ -3,12 +3,13 @@
     <title>7조 웹사이트</title>
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Bitter&subset=latin" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
   </head>
   <body>
           <style type="text/css">
           p1{
             text-align:center;
-            margin: 10px,10px,10px,10px;
+            
             font-family:"궁서체";
             
           }
@@ -465,6 +466,169 @@ label#sidemenutoggler::after {
   transition: opacity 0.3s;
 }
 
+/* 3D 버튼(맨 위로 가는 버튼) */
+a.css3dbutton {
+    background: darkred; /* background color of button */
+    color: white;
+    text-decoration: none;
+    font: bold 28px Arial; /* font size and style */
+    position: relative;
+		top: 0; /* anchor main button's position */
+    bottom: -12px; /* Depth of 3D effect. :after pseudo element inherits this value so it's animated in Chrome. See: kizu.ru/en/pseudos */
+		margin-bottom: 12px;
+    -moz-box-shadow: 0 -15px 5px darkred inset;
+    -webkit-box-shadow: 0 -15px 5px darkred inset;
+    box-shadow: 0 -15px 5px darkred inset;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+a.css3dbutton, a.css3dbutton:after {
+    display: inline-block;
+    padding: 10px 15px; /* vertical and horizontal padding of button */
+    -moz-border-radius: 8px/15px;
+    -webkit-border-radius: 8px/15px;
+    border-radius: 8px/15px;
+    outline: none;
+}
+
+a.css3dbutton:after { /* pseudo element to construct 3D side of button */
+    content: "";
+    position: absolute;
+    padding: 0;
+    z-index: -1;
+    bottom: inherit; /* Inherit main button bottom value to animate it. See: kizu.ru/en/pseudos */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #6e0e0c; /* background color of 3D effect */
+    -moz-box-shadow: 1px 0 3px gray;
+    -webkit-box-shadow: 1px 0 3px gray;
+    box-shadow: 1px 0 3px gray;
+}
+
+a.css3dbutton:hover {
+    -moz-box-shadow: 0 25px 5px rgba(182, 64, 61, 0.7) inset;
+    -webkit-box-shadow: 0 25px 5px rgba(182, 64, 61, 0.7) inset;
+    box-shadow: 0 25px 5px rgba(182, 64, 61, 0.7) inset;
+    background: #bc3835; /* background color when mouse rolls over button */
+}
+
+a.css3dbutton:active {
+    top: 12px; /* shift button down 12px when depressed. Change 12px to match button's "bottom" property above */
+    bottom: 0;
+    -moz-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+    -webkit-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+    box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+}
+
+/* 헤더 메뉴들 */
+ul.sonarmenu{ /* Inspired by http://tympanus.net/codrops/2013/08/06/creative-link-effects */
+	list-style: none;
+}
+
+ul.sonarmenu li{
+ display: inline;
+}
+
+ul.sonarmenu a{
+	position: relative;
+	display: inline-block;
+	color: black; /* font color */
+	text-decoration: none;
+	margin: 10px 20px;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif; /* font style (uses Google fonts) */
+	font-size: 22px; /* font size */
+	letter-spacing: 2px; /* letter spacing */
+	border-bottom: 2px solid transparent; /* Bottom border style */
+}
+
+ul.sonarmenu a:hover, ul.sonarmenu a:focus{
+	outline: none;
+	border-bottom: 2px solid #eee; /* Bottom border style on hover */
+}
+
+ul.sonarmenu a::before, ul.sonarmenu a:after{ /* shared style for two circles */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 70px; /* width of outer circle */
+	height: 70px; /* height of outer circle */
+	border: 12px double rgba(0,0,0,0.1); /* style and color of circles */
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+ul.sonarmenu a:after{ /* inner circle specific CSS */
+	width: 60px; /* width of inner circle */
+	height: 60px; /* width of inner circle */
+	border-width: 6px;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+ul.sonarmenu a:hover:before, ul.sonarmenu a:hover:after{
+	-webkit-animation: pulsate 1.2s infinite; /* animation name duration loop etc */
+	-moz-animation: pulsate 1.2s infinite;
+	-ms-animation: pulsate 1.2s infinite;
+	animation: pulsate 1.2s infinite;
+}
+
+/* ### Keyframe animations ### */
+
+@-webkit-keyframes pulsate{
+
+  30%{
+	opacity: 1;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+	100%{
+	opacity: 0.3;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.5);
+	}
+
+}
+
+@-moz-keyframes pulsate{
+
+  30%{
+	opacity: 1;
+	-moz-transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+	100%{
+	opacity: 0.3;
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.5);
+	}
+
+}
+
+@-ms-keyframes pulsate{
+
+  30%{
+	opacity: 1;
+	-ms-transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+	100%{
+	opacity: 0.3;
+	-ms-transform: translateX(-50%) translateY(-50%) scale(0.5);
+	}
+
+}
+
+
+
+
 </style>
 
 <script>
@@ -496,13 +660,21 @@ label#sidemenutoggler::after {
                                  <li><a href="http://192.168.0.68:8080/ui5.html">홈페이지 낙서방</a></li>
                                  <li><a href="http://comic.naver.com/index.nhn">만화방</a></li>
                                  <li><a href="https://www.youtube.com//">영상방</a></li>
-                                 <li><a href="http://dundam.xyz/">게임방</a></li>
+                                 <li><a href="http://dundam.xyz/view.jsp?server=hilder&name=%EC%A7%80%EC%BD%94&image=11f58acf8f87a681d86df2eb38911936/">게임방</a></li>
                                  </ul>
                                <label id="closex" for="sidemenucheckbox" onClick="legacybrowsertoggle()">Close</label>
                                </nav>
                                  
                                <div class="overlay"><label for="sidemenucheckbox"></label></div>
                                <p1>위에 누르고 싶지~? (궁서체)</p1>
+                               <ul class="sonarmenu">
+                                <li><a href="http://www.dynamicdrive.com">Home</a></li>
+                                <li><a href="http://tools.dynamicdrive.com">Tools</a></li>
+                                <li><a href="http://www.cssdrive.com">CSS</a></li>
+                                <li><a href="http://www.dynamicdrive.com/forums/">Forums</a></li>
+                                <li><a href="http://www.javascriptkit.com">JavaScript</a></li>
+                                </ul>
+
           </div>
           <!-- //header -->
           <div class="container">
@@ -578,6 +750,7 @@ label#sidemenutoggler::after {
                   </div>
                  <div>
                    <p2>   ↑ 재영이형</p2>
+                   <a href="#" class="css3dbutton">위로 이동</a>
                  </div>
             </div>
           </div>
