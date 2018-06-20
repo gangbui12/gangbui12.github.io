@@ -2,9 +2,20 @@
   <head>
     <title>7조 웹사이트</title>
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Bitter&subset=latin" rel="stylesheet" type="text/css">
   </head>
   <body>
           <style type="text/css">
+          p1{
+            text-align:center;
+            margin: 10px,10px,10px,10px;
+            font-family:"궁서체";
+            
+          }
+          p2{
+            
+            margin: 350;
+          }
             body {
               font:14px/1.8 Arial, Helvetica, sans-serif;
             }
@@ -16,17 +27,19 @@
             }
             .header {
   padding:40px 10px;
-  text-align: center;
+  
   background: #eee;
   margin-bottom: 20px;
 }
 .logo {
+  
   font-family: 'Lobster'; 
   font-size: 2em;
   font-weight: bold;
   background: #5457de;
   color: #fff;
-  display: inline-block;
+  
+  text-align: center;
   padding: 0 8px;
 }
 .container {
@@ -58,7 +71,7 @@
 }
 .content {
   float: left;
-  width: 600px;
+  width: 800px;
 }
 .footer {
   text-align: center;
@@ -84,6 +97,7 @@ h1{
   color :red;
 }
 .table13_10 table { /* 테이블 관련 */
+
 	width:100%;
 	margin:20px 0;
 	border:0;
@@ -185,10 +199,310 @@ div.flip:hover > div.rotate.y{ /* Y Axis rotate specific CSS. Rotate div.rotate.
 -o-transform: rotateY(180deg);
 transform: rotateY(180deg);
 }
-             </style>
+
+ul.gallery{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.gallery li{
+  display: block;
+  width: 200px; /* width of gallery */
+  height: 50px; /* portion of each gallery image that's shown initially */
+  position: relative;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+ul.gallery li img{
+  position: absolute;
+  width: 100%;
+  border: 10px solid #D8D2A2;
+ -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+	filter: url(#grayscale); 
+  filter: grayscale(1);
+	-webkit-transition: all .5s ease-in-out; /* CSS3 transition setting */
+	-moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+
+ul.gallery li:focus{ /* when a LI receives focus (clicked on) */
+  z-index: 100;
+	outline: none;
+	-webkit-transform: rotate(3deg); /* rotate enlarged LI by 3 degrees */
+	-moz-transform: rotate(3deg);
+	transform: rotate(3deg); 
+	pointer-events: none; /* disable pointer events on enlarged LI so thumbnail(s) beneath it can receive those events */
+}
+
+ul.gallery li:nth-of-type(even):focus{ /* even LIs that received focus */
+	-webkit-transform: rotate(-1deg); /* rotate enlarged LI by -1 degrees instead */
+	-moz-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+}
+
+ul.gallery li:focus img{
+  -webkit-transform: scale(2) translateX(80%); /* enlarge focused image and move horizontally */
+  -moz-transform: scale(2) translateX(80%);
+  transform: scale(2) translateX(80%);
+  top: 10px; /* shift enlarged image downwards by 10px */
+	outline: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4); 
+  -webkit-filter: grayscale(0); /* nullify grayscale effect */
+  filter: none;
+}
+
+ul.gallery li:first-of-type:focus img{ /* first image within list of thumbnails that receives focus */
+  top: 80px; /* move image down by 80px so it's not obscured by top of window edge */
+}
+
+svg{
+	position: absolute;
+	visibility: hidden;
+}
+
+
+body {  /* webkit adjacent sibling bug fix */
+  -webkit-animation: bugfix infinite 1s; 
+}
+
+@-webkit-keyframes bugfix { 
+  from {padding:0;} 
+  to {padding:0;} 
+}
+
+label#sidemenutoggler {   /* Main label icon to toggle menu state */
+  z-index: 100;
+  display: block;
+  position: relative;
+  font-size: 10px; /* change font size to change label dimensions. Leave width/height below alone */
+  width: 3.5em;
+  height: 2em;
+  top: 0;
+  left: 0;
+  background: white;
+  text-indent: -1000px;
+  border: 0.6em solid black; /* border color */
+  border-width: 0.6em 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; /* transition for animating label */
+}
+
+
+label#sidemenutoggler::before,
+label#sidemenutoggler::after {
+  /* inner stripes inside label */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0.6em;
+  top: 50%;
+  margin-top: -0.3em;
+  left: 0;
+  background: black; /* stripes background color. Change to match border color of parent label above */
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; /* transition for flipping label */
+}
+
+#sidemenucheckbox:checked ~ label#sidemenutoggler {
+  /* state of main menu label when menu is open  */
+  border-color: transparent;
+}
+
+#sidemenucheckbox:checked ~ label#sidemenutoggler::before {
+  /* state of main menu label::before when menu is open  */
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#sidemenucheckbox:checked ~ label#sidemenutoggler::after {
+  /* state of main menu label::after when menu is open  */
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#sidemenucheckbox{ /* main side bar menu style */
+	display: none;
+}
+
+#rightsidemenu{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 250px; /* width of menu */
+	height: 100%;
+	background: #F7D48A; /* background of menu */
+  font: bold 1em 'Bitter', sans-serif; /* Use google custom fonts for this menu */
+  z-index: 1001;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  visibility: hidden;
+  box-shadow: 5px 0 10px rgba(0,0,0,.2);
+	-webkit-transform: translate3d(100%,0,0) rotate(-20deg); /* offset and rotate menu. Remove rotate() if desired */
+	transform: translate3d(100%,0,0) rotate(-20deg);
+}
+
+#rightsidemenu a{
+	text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+#rightsidemenu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+	text-align: center;
+  font-size: 1.5em;
+  -webkit-transform: translate3d(0,-20%,0); /* move UL upwards slightly, so it slides down menu opened */
+  transform: translate3d(0,-20%,0);
+  opacity: 0;
+}
+
+#rightsidemenu ul li{
+}
+
+#rightsidemenu ul li a{
+  padding: 30px 10px;
+  display: block;
+}
+
+#rightsidemenu ul li a:hover{
+  background: #F7AC6A;
+  transition: all 0.5s;
+  
+}
+.overlay{
+  content: '';
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-transition: opacity .3s, visibility 0s .3s;
+  transition: opacity .3s, visibility 0s .3s;
+}
+
+.overlay label{
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+#rightsidemenu label#closex{ /* Large x close button inside nav */
+  width: 50px;
+  height: 50px;
+	overflow: hidden;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+	text-indent: -1000px;
+  z-index: 10;
+  top: 0;
+  left: 5px;
+}
+
+
+#rightsidemenu label#closex::before,
+#rightsidemenu label#closex::after{ /* render large cross inside close button */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: black;
+  top: 50%;
+  margin-top: -3px;
+  -ms-transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
+
+#rightsidemenu label#closex::after{ /* render large cross inside close button */
+  -ms-transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+
+#sidemenucheckbox:checked ~ #rightsidemenu{
+  visibility: visible;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+
+#sidemenucheckbox:checked ~ #rightsidemenu ul{
+  -webkit-transform: translate3d(0,50px,0); /* shift menu downwards when revealed */
+  transform: translate3d(0,50px,0);
+  opacity: 1;
+  -webkit-transition: opacity 1s .5s, -webkit-transform 1s .5s;
+  transition: opacity 1s .5s, transform 1s .5s;
+}
+
+#sidemenucheckbox:checked ~ .overlay{
+  opacity: .8;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+</style>
+
+<script>
+
+  document.createElement('nav')
+  
+  function legacybrowsertoggle(){
+    if (!document.getElementsByClassName){ // legacy browsers only
+      var mobilemenunav = document.getElementById("rightsidemenu")
+      if (mobilemenunav.style.visibility != 'visible')
+        mobilemenunav.style.visibility = 'visible'
+      else
+        mobilemenunav.style.visibility = 'hidden'
+    }
+  }
+  
+  </script>
         <div class="frame">
           <div class="header">
             <div class="logo">Chang-eun pirate group</div>
+                               <!-- 체크박스(누르면 오른쪽 이벤트) -->
+                               <input type="checkbox" id="sidemenucheckbox" />
+
+                               <label id="sidemenutoggler" for="sidemenucheckbox" onClick="legacybrowsertoggle()">Toggle Menu</label>
+                               
+                               <nav id="rightsidemenu">
+                               
+                                 <ul>
+                                 <li><a href="http://192.168.0.68:8080/ui5.html">홈페이지 낙서방</a></li>
+                                 <li><a href="http://comic.naver.com/index.nhn">만화방</a></li>
+                                 <li><a href="https://www.youtube.com//">영상방</a></li>
+                                 <li><a href="http://dundam.xyz/">게임방</a></li>
+                                 </ul>
+                               <label id="closex" for="sidemenucheckbox" onClick="legacybrowsertoggle()">Close</label>
+                               </nav>
+                                 
+                               <div class="overlay"><label for="sidemenucheckbox"></label></div>
+                               <p1>위에 누르고 싶지~? (궁서체)</p1>
           </div>
           <!-- //header -->
           <div class="container">
@@ -210,6 +524,25 @@ transform: rotateY(180deg);
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nam error ipsa commodi exercitationem fugiat praesentium tempore inventore voluptate dolore. Ipsa quisquam nemo enim explicabo aut accusantium ex ab perspiciatis.
               </p>
+
+               <!-- 사진방식 2 -->
+               <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <filter id="grayscale">
+                  <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0
+                  0.3333 0.3333 0.3333 0 0
+                  0.3333 0.3333 0.3333 0 0
+                  0 0 0 1 0" />
+                </filter>
+              </svg>
+              <ul class="gallery" title="Tab after clicking on a thumbnail to cycle though thumbnails">
+              <li tabindex="1"><img src="media/WIN_20180511_11_38_49_Pro.jpg" /></li>
+              <li tabindex="2"><img src="media/imagescaghl98e_wnrmfdlwndls.jpg" /></li>
+              <li tabindex="3"><img src="media/externalFile.png" /></li>
+              <li tabindex="4"><img src="media/할일없이뒹굴뒹굴.jpg" /></li>
+              <li tabindex="5"><img src="media/1516151001611.jpg" /></li>
+              </ul>
+
+               <!-- 테이블 -->
               <table class=table13_10>
                 <tr>
                   <th>SAMPLE1</th><th>SAMPLE2</th><th>SAMPLE3</th>
@@ -227,43 +560,31 @@ transform: rotateY(180deg);
                   <td>SAMPLE</td><td>SAMPLE</td><td>SAMPLE</td>
                 </tr>
                 </table>
+                 <!-- 사진방식 1 -->
+                <div class="flip" style="display: inline-block; margin-right: 40px">
+                  <div class="rotate x">                                 
+                    <img src="media/공석.png">                                                 
+                    <div>
+                      안녕 난 콩나물이야 낄룩 <br /><br />
+                      <img src="media/KakaoTalk_20180528_202309346.png" style="margin:0 auto" />
+                    </div>                                  
+                  </div>
+                  </div>                                 
+                  <div class="flip" style="width: 250px; height: 200px; display: inline-block;">
+                  <div class="rotate y">                              
+                    <img src="media/KakaoTalk_20180620_091726981.jpg">                              
+                    <img src="media/2241_276_0.gif">                               
+                  </div>
+                  </div>
+                 <div>
+                   <p2>   ↑ 재영이형</p2>
+                 </div>
             </div>
           </div>
           <!-- //container -->
           <div class="footer">
-            <p class="copyright">&copy;Bit27</p>
+            <p class="copyright">&copy;Bit27 (7조)</p>
             
-            <div class="flip" style="display: inline-block; margin-right: 40px">
-              <div class="rotate x">
-              
-              
-                <img src="media/8888.jpg">
-              
-              
-              
-                <div>
-                  안녕 난 콩나물이야 낄룩 <br /><br />
-                  <img src="media/KakaoTalk_20180528_202309346.png" style="margin:0 auto" />
-                </div>
-              
-              
-              </div>
-              </div>
-              
-              
-              <div class="flip" style="width: 250px; height: 200px; display: inline-block;">
-              <div class="rotate y">
-              
-              
-                <img src="media/1.jpg">
-              
-              
-                <img src="media/KakaoTalk_20180620_091726981.jpg">
-              
-              
-              </div>
-              </div>
-
               
           </div>
           <!-- //footer -->
