@@ -83,6 +83,108 @@ h1{
   text-decoration : underline;
   color :red;
 }
+.table13_10 table { /* 테이블 관련 */
+	width:100%;
+	margin:20px 0;
+	border:0;
+}
+.table13_10 th {
+	font-weight:bold;
+	background-color:#d8f5fe;
+	color:#20bffe
+} 
+.table13_10,.table13_10 th,.table13_10 td {
+	font-size:0.95em;
+	text-align:center;
+	padding:10px;
+	border-collapse:collapse;
+}
+.table13_10 th,.table13_10 td {
+	border: 5px solid #ffffff;
+	border-width:1px 0 1px 0
+}
+.table13_10 tr {
+	border: 5px solid #ffffff;
+}
+.table13_10 tr:nth-child(odd){
+	background-color:#f7f7f7;
+}
+.table13_10 tr:nth-child(even){
+	background-color:#ffffff;
+}
+
+div.flip{   /* 사진 관련 */
+position:relative;
+width: 300px; /* Set default width of flip */
+height: 250px; /* Set default height */
+-webkit-perspective: 600px; /* larger the value, the less pronounced the 3D effect */
+-moz-perspective: 600px;
+-o-perspective: 600px;
+perspective: 600px;
+}
+
+
+div.flip div.rotate{
+width: 100%;
+height: 100%;
+-moz-transform-style: preserve-3d; /* Specify all child elements inside this DIV maintain the same perspective */
+-webkit-transform-style: preserve-3d;
+-o-transform-style: preserve-3d;
+transform-style: preserve-3d;
+-moz-transition: all 0.6s ease-in-out 0.3s; /* final 0.3s specifies delay before effect kicks in */
+-webkit-transition: all 0.6s ease-in-out 0.3s;
+-o-transition: all 0.6s ease-in-out 0.3s;
+transition: all 0.6s ease-in-out 0.3s;
+}
+
+div.flip div.rotate > *{ /* Target all children elements */
+position:absolute;
+width: 100%;
+height: 100%;
+-moz-backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+div.flip div.rotate > div{ /* Target all child DIVs */
+-webkit-box-sizing: border-box; /* Specify that any border/ paddings do not add to the DIV's total width */
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding: 8px;
+background: #eee;
+}
+
+div.rotate.x *:nth-child(2){ /* X Axis rotate specific CSS. Rotate 2nd child DIV 180deg in the X axis */
+-moz-transform: rotateX(180deg);
+-webkit-transform: rotateX(180deg);
+-o-transform: rotateX(180deg);
+transform: rotateX(180deg);
+}
+
+
+div.flip:hover > div.rotate.x{ /* X Axis rotate specific CSS. Rotate div.rotate.x when mouse rolls over container */
+-moz-transform: rotateX(180deg);
+-webkit-transform: rotateX(180deg);
+-o-transform: rotateX(180deg);
+transform: rotateX(180deg);
+}
+
+
+div.rotate.y *:nth-child(2){ /* Y Axis rotate specific CSS. Rotate 2nd child DIV 180deg in the Y axis so it mirrors the first */
+-moz-transform: rotateY(180deg);
+-webkit-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
+
+
+div.flip:hover > div.rotate.y{ /* Y Axis rotate specific CSS. Rotate div.rotate.y when mouse rolls over container */
+-moz-transform: rotateY(180deg);
+-webkit-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
              </style>
         <div class="frame">
           <div class="header">
@@ -108,11 +210,61 @@ h1{
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nam error ipsa commodi exercitationem fugiat praesentium tempore inventore voluptate dolore. Ipsa quisquam nemo enim explicabo aut accusantium ex ab perspiciatis.
               </p>
+              <table class=table13_10>
+                <tr>
+                  <th>SAMPLE1</th><th>SAMPLE2</th><th>SAMPLE3</th>
+                </tr>
+                <tr>
+                  <td>SAMPLE</td><td>SAMPLE</td><td>SAMPLE</td>
+                </tr>
+                <tr>
+                  <td>SAMPLE</td><td>SAMPLE</td><td>SAMPLE</td>
+                </tr>
+                  <tr>
+                  <td>SAMPLE</td><td>SAMPLE</td><td>SAMPLE</td>
+                </tr>
+                <tr>
+                  <td>SAMPLE</td><td>SAMPLE</td><td>SAMPLE</td>
+                </tr>
+                </table>
             </div>
           </div>
           <!-- //container -->
           <div class="footer">
             <p class="copyright">&copy;Bit27</p>
+            
+            <div class="flip" style="display: inline-block; margin-right: 40px">
+              <div class="rotate x">
+              
+              
+                <img src="media/8888.jpg">
+              
+              
+              
+                <div>
+                  안녕 난 콩나물이야 낄룩 <br /><br />
+                  <img src="media/KakaoTalk_20180528_202309346.png" style="margin:0 auto" />
+                </div>
+              
+              
+              </div>
+              </div>
+              
+              
+              <div class="flip" style="width: 250px; height: 200px; display: inline-block;">
+              <div class="rotate y">
+              
+              
+                <img src="media/1.jpg">
+              
+              
+                <img src="media/BFCCE1.jpg">
+              
+              
+              </div>
+              </div>
+
+              
           </div>
           <!-- //footer -->
         </div>
