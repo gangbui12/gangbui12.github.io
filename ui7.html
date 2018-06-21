@@ -1,52 +1,863 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html>
+  <head>
+    <title>7조 웹사이트</title>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Bitter&subset=latin" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+          <style type="text/css">
+          p1{
+            text-align:center;
+            
+            font-family:"궁서체";
+            
+          }
+        
+          p2{
+            
+            margin: 350;
+          }
+          .left{
+            float: left;
+          }
+          .right{
+            float: right;
+          }
+            body {
+              font:14px/1.8 Arial, Helvetica, sans-serif;
+            }
+            .frame {
+              width: 1300;
+              height: auto;
+              margin: 0 auto;
+              border: 1px solid #aaa;
+            }
+            .header {
 
-<head>
-	<meta charset="UTF-8">
-	<title>CSS Float</title>
-	<style>
-		div.page {
-			border: 3px solid #CD5C5C;
-			overflow: auto;
-		}
-		h2 { text-align: center; }
-		header{ border: 3px solid #FFD700; }
-		nav {
-			border: 3px solid #FF1493;
-			width: 150px;
-			float: left;
-		}
-		section {
-			border: 3px solid #00BFFF;
-			margin-left: 156px;
-		}
-		footer{ border: 3px solid #00FA9A; }
-	</style>
-</head>
+  
+  background: #eee;
+  margin-bottom: 20px;
+}
+.logo {
+  
+  font-family: 'Lobster'; 
+  font-size: 2em;
+  font-weight: bold;
+  background: #5457de;
+  color: #fff;
+  
+  text-align: center;
+  padding: 0 8px;
+}
+.container {
+  overflow: hidden;
+}
+.nav {
+  float: left;
+  width: 150px;
+  background: #333;
+  color: #fff;
+  margin-right: 50px;
+}
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.nav-item {
+  margin: 4px 0;
+}
+.nav-link {
+  display: block;
+  text-decoration: none;
+  padding: 4px 10px;
+  color: #fff;
+}
+.nav-link:hover {
+  background: #5457de;
+}
+.content {
+  float: left;
+  width: 800px;
+}
+.footer {
+  text-align: center;
+  border-top: 1px solid #aaa;
+  margin: 20px 20px 0;
+  font-size: 12px;
+}
+.container {
+  display: table;
+}
+.nav, .content {
+  display: table-cell;
+}
+.container {
+  background: #333;
+}
+.content {
+  padding-left:40;
+  background: #fff;
+}
+h1{
+  text-decoration : underline;
+  color:cornflowerblue;
+}
+.table13_10 table { /* 테이블 관련 */
 
-<body>
+	width:100%;
+	margin:20px 0;
+	border:0;
+}
+.table13_10 th {
+	font-weight:bold;
+	background-color:#d8f5fe;
+	color:#20bffe
+} 
+.table13_10,.table13_10 th,.table13_10 td {
+	font-size:0.95em;
+	text-align:center;
+	padding:10px;
+	border-collapse:collapse;
+}
+.table13_10 th,.table13_10 td {
+	border: 5px solid #ffffff;
+	border-width:1px 0 1px 0
+}
+.table13_10 tr {
+	border: 5px solid #ffffff;
+}
+.table13_10 tr:nth-child(odd){
+	background-color:#f7f7f7;
+}
+.table13_10 tr:nth-child(even){
+	background-color:#ffffff;
+}
 
-	<h1>float 속성을 이용한 레이아웃</h1>
-	<div class="page">
-		
-		<header>
-			<h2>header 영역</h2>
-		</header>
-		<nav>
-			<h2>nav 영역</h2>
-			<p>여기에는 보통 메뉴가 들어갑니다.</p>
-		</nav>
-		<section>
-			<h2>section 영역</h2>
-			<p>여기에는 페이지에 해당하는 내용이 들어갑니다.<br>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sapien suscipit tincidunt ullamcorper. Cras ac sem sed mauris maximus rhoncus vel in metus. Nam pharetra arcu sit amet dolor interdum, eget scelerisque libero finibus. Phasellus quis vulputate ante. Fusce sit amet viverra justo. Donec id elementum mauris. Nam id porttitor nisl, et suscipit nunc. Vestibulum sit amet volutpat quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis placerat sem eu facilisis ultricies.
-			</p>
-		</section>
-		<footer>
-			<h2>footer 영역</h2>
-		</footer>
-	</div>
+div.flip{   /* 사진 관련 */
+position:relative;
+width: 300px; /* Set default width of flip */
+height: 250px; /* Set default height */
+-webkit-perspective: 600px; /* larger the value, the less pronounced the 3D effect */
+-moz-perspective: 600px;
+-o-perspective: 600px;
+perspective: 600px;
+}
 
-</body>
 
+div.flip div.rotate{
+width: 100%;
+height: 100%;
+-moz-transform-style: preserve-3d; /* Specify all child elements inside this DIV maintain the same perspective */
+-webkit-transform-style: preserve-3d;
+-o-transform-style: preserve-3d;
+transform-style: preserve-3d;
+-moz-transition: all 0.6s ease-in-out 0.3s; /* final 0.3s specifies delay before effect kicks in */
+-webkit-transition: all 0.6s ease-in-out 0.3s;
+-o-transition: all 0.6s ease-in-out 0.3s;
+transition: all 0.6s ease-in-out 0.3s;
+}
+
+div.flip div.rotate > *{ /* Target all children elements */
+position:absolute;
+width: 100%;
+height: 100%;
+-moz-backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+div.flip div.rotate > div{ /* Target all child DIVs */
+-webkit-box-sizing: border-box; /* Specify that any border/ paddings do not add to the DIV's total width */
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding: 8px;
+background: #eee;
+}
+
+div.rotate.x *:nth-child(2){ /* X Axis rotate specific CSS. Rotate 2nd child DIV 180deg in the X axis */
+-moz-transform: rotateX(180deg);
+-webkit-transform: rotateX(180deg);
+-o-transform: rotateX(180deg);
+transform: rotateX(180deg);
+}
+
+
+div.flip:hover > div.rotate.x{ /* X Axis rotate specific CSS. Rotate div.rotate.x when mouse rolls over container */
+-moz-transform: rotateX(180deg);
+-webkit-transform: rotateX(180deg);
+-o-transform: rotateX(180deg);
+transform: rotateX(180deg);
+}
+
+
+div.rotate.y *:nth-child(2){ /* Y Axis rotate specific CSS. Rotate 2nd child DIV 180deg in the Y axis so it mirrors the first */
+-moz-transform: rotateY(180deg);
+-webkit-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
+
+
+div.flip:hover > div.rotate.y{ /* Y Axis rotate specific CSS. Rotate div.rotate.y when mouse rolls over container */
+-moz-transform: rotateY(180deg);
+-webkit-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+}
+
+ul.gallery{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.gallery li{
+  display: block;
+  width: 200px; /* width of gallery */
+  height: 50px; /* portion of each gallery image that's shown initially */
+  position: relative;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+ul.gallery li img{
+  position: absolute;
+  width: 100%;
+  border: 10px solid #D8D2A2;
+ -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+	filter: url(#grayscale); 
+  filter: grayscale(1);
+	-webkit-transition: all .5s ease-in-out; /* CSS3 transition setting */
+	-moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+
+ul.gallery li:focus{ /* when a LI receives focus (clicked on) */
+  z-index: 100;
+	outline: none;
+	-webkit-transform: rotate(3deg); /* rotate enlarged LI by 3 degrees */
+	-moz-transform: rotate(3deg);
+	transform: rotate(3deg); 
+	pointer-events: none; /* disable pointer events on enlarged LI so thumbnail(s) beneath it can receive those events */
+}
+
+ul.gallery li:nth-of-type(even):focus{ /* even LIs that received focus */
+	-webkit-transform: rotate(-1deg); /* rotate enlarged LI by -1 degrees instead */
+	-moz-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+}
+
+ul.gallery li:focus img{
+  -webkit-transform: scale(2) translateX(80%); /* enlarge focused image and move horizontally */
+  -moz-transform: scale(2) translateX(80%);
+  transform: scale(2) translateX(80%);
+  top: 10px; /* shift enlarged image downwards by 10px */
+	outline: none;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4); 
+  -webkit-filter: grayscale(0); /* nullify grayscale effect */
+  filter: none;
+}
+
+ul.gallery li:first-of-type:focus img{ /* first image within list of thumbnails that receives focus */
+  top: 80px; /* move image down by 80px so it's not obscured by top of window edge */
+}
+
+svg{
+	position: absolute;
+	visibility: hidden;
+}
+
+
+body {  /* webkit adjacent sibling bug fix */
+  -webkit-animation: bugfix infinite 1s; 
+}
+
+@-webkit-keyframes bugfix { 
+  from {padding:0;} 
+  to {padding:0;} 
+}
+
+label#sidemenutoggler {   /* Main label icon to toggle menu state */
+  z-index: 100;
+  display: block;
+  position: relative;
+  font-size: 10px; /* change font size to change label dimensions. Leave width/height below alone */
+  width: 3.5em;
+  height: 2em;
+  top: 0;
+  left: 0;
+  background: white;
+  text-indent: -1000px;
+  border: 0.6em solid black; /* border color */
+  border-width: 0.6em 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; /* transition for animating label */
+}
+
+
+label#sidemenutoggler::before,
+label#sidemenutoggler::after {
+  /* inner stripes inside label */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0.6em;
+  top: 50%;
+  margin-top: -0.3em;
+  left: 0;
+  background: black; /* stripes background color. Change to match border color of parent label above */
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; /* transition for flipping label */
+}
+
+#sidemenucheckbox:checked ~ label#sidemenutoggler {
+  /* state of main menu label when menu is open  */
+  border-color: transparent;
+}
+
+#sidemenucheckbox:checked ~ label#sidemenutoggler::before {
+  /* state of main menu label::before when menu is open  */
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#sidemenucheckbox:checked ~ label#sidemenutoggler::after {
+  /* state of main menu label::after when menu is open  */
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#sidemenucheckbox{ /* main side bar menu style */
+	display: none;
+}
+
+#rightsidemenu{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 250px; /* width of menu */
+	height: 100%;
+	background: #F7D48A; /* background of menu */
+  font: bold 1em 'Bitter', sans-serif; /* Use google custom fonts for this menu */
+  z-index: 1001;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  visibility: hidden;
+  box-shadow: 5px 0 10px rgba(0,0,0,.2);
+	-webkit-transform: translate3d(100%,0,0) rotate(-20deg); /* offset and rotate menu. Remove rotate() if desired */
+	transform: translate3d(100%,0,0) rotate(-20deg);
+}
+
+#rightsidemenu a{
+	text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+#rightsidemenu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+	text-align: center;
+  font-size: 1.5em;
+  -webkit-transform: translate3d(0,-20%,0); /* move UL upwards slightly, so it slides down menu opened */
+  transform: translate3d(0,-20%,0);
+  opacity: 0;
+}
+
+#rightsidemenu ul li{
+}
+
+#rightsidemenu ul li a{
+  padding: 30px 10px;
+  display: block;
+}
+
+#rightsidemenu ul li a:hover{
+  background: #F7AC6A;
+  transition: all 0.5s;
+  
+}
+.overlay{
+  content: '';
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1000;
+  -webkit-transition: opacity .3s, visibility 0s .3s;
+  transition: opacity .3s, visibility 0s .3s;
+}
+
+.overlay label{
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+#rightsidemenu label#closex{ /* Large x close button inside nav */
+  width: 50px;
+  height: 50px;
+	overflow: hidden;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+	text-indent: -1000px;
+  z-index: 10;
+  top: 0;
+  left: 5px;
+}
+
+
+#rightsidemenu label#closex::before,
+#rightsidemenu label#closex::after{ /* render large cross inside close button */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: black;
+  top: 50%;
+  margin-top: -3px;
+  -ms-transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
+
+#rightsidemenu label#closex::after{ /* render large cross inside close button */
+  -ms-transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+
+#sidemenucheckbox:checked ~ #rightsidemenu{
+  visibility: visible;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+
+#sidemenucheckbox:checked ~ #rightsidemenu ul{
+  -webkit-transform: translate3d(0,50px,0); /* shift menu downwards when revealed */
+  transform: translate3d(0,50px,0);
+  opacity: 1;
+  -webkit-transition: opacity 1s .5s, -webkit-transform 1s .5s;
+  transition: opacity 1s .5s, transform 1s .5s;
+}
+
+#sidemenucheckbox:checked ~ .overlay{
+  opacity: .8;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+/* 3D 버튼(맨 위로 가는 버튼) */
+a.css3dbutton {
+    background: darkred; /* background color of button */
+    color: white;
+    text-decoration: none;
+    font: bold 28px Arial; /* font size and style */
+    position: relative;
+		top: 0; /* anchor main button's position */
+    bottom: -12px; /* Depth of 3D effect. :after pseudo element inherits this value so it's animated in Chrome. See: kizu.ru/en/pseudos */
+		margin-bottom: 12px;
+    -moz-box-shadow: 0 -15px 5px darkred inset;
+    -webkit-box-shadow: 0 -15px 5px darkred inset;
+    box-shadow: 0 -15px 5px darkred inset;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+a.css3dbutton, a.css3dbutton:after {
+    display: inline-block;
+    padding: 10px 15px; /* vertical and horizontal padding of button */
+    -moz-border-radius: 8px/15px;
+    -webkit-border-radius: 8px/15px;
+    border-radius: 8px/15px;
+    outline: none;
+}
+
+a.css3dbutton:after { /* pseudo element to construct 3D side of button */
+    content: "";
+    position: absolute;
+    padding: 0;
+    z-index: -1;
+    bottom: inherit; /* Inherit main button bottom value to animate it. See: kizu.ru/en/pseudos */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #6e0e0c; /* background color of 3D effect */
+    -moz-box-shadow: 1px 0 3px gray;
+    -webkit-box-shadow: 1px 0 3px gray;
+    box-shadow: 1px 0 3px gray;
+}
+
+a.css3dbutton:hover {
+    -moz-box-shadow: 0 25px 5px rgba(182, 64, 61, 0.7) inset;
+    -webkit-box-shadow: 0 25px 5px rgba(182, 64, 61, 0.7) inset;
+    box-shadow: 0 25px 5px rgba(182, 64, 61, 0.7) inset;
+    background: #bc3835; /* background color when mouse rolls over button */
+}
+
+a.css3dbutton:active {
+    top: 12px; /* shift button down 12px when depressed. Change 12px to match button's "bottom" property above */
+    bottom: 0;
+    -moz-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+    -webkit-box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+    box-shadow: 0 -20px 5px darkred inset, 1px 1px 2px #eee;
+}
+
+/* 헤더 메뉴들 */
+ul.sonarmenu{ /* Inspired by http://tympanus.net/codrops/2013/08/06/creative-link-effects */
+	list-style: none;
+}
+
+ul.sonarmenu li{
+ display: inline;
+}
+
+ul.sonarmenu a{
+	position: relative;
+	display: inline-block;
+	color: black; /* font color */
+	text-decoration: none;
+	margin: 10px 20px;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif; /* font style (uses Google fonts) */
+	font-size: 12px; /* font size */
+
+	border-bottom: 2px solid transparent; /* Bottom border style */
+}
+
+ul.sonarmenu a:hover, ul.sonarmenu a:focus{
+	outline: none;
+	border-bottom: 2px solid #eee; /* Bottom border style on hover */
+}
+
+ul.sonarmenu a::before, ul.sonarmenu a:after{ /* shared style for two circles */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 70px; /* width of outer circle */
+	height: 70px; /* height of outer circle */
+	border: 12px double rgba(0,0,0,0.1); /* style and color of circles */
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+ul.sonarmenu a:after{ /* inner circle specific CSS */
+	width: 60px; /* width of inner circle */
+	height: 60px; /* width of inner circle */
+	border-width: 6px;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+ul.sonarmenu a:hover:before, ul.sonarmenu a:hover:after{
+	-webkit-animation: pulsate 1.2s infinite; /* animation name duration loop etc */
+	-moz-animation: pulsate 1.2s infinite;
+	-ms-animation: pulsate 1.2s infinite;
+	animation: pulsate 1.2s infinite;
+}
+
+/* ### Keyframe animations ### */
+
+@-webkit-keyframes pulsate{
+
+  30%{
+	opacity: 1;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+	100%{
+	opacity: 0.3;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.5);
+	}
+
+}
+
+@-moz-keyframes pulsate{
+
+  30%{
+	opacity: 1;
+	-moz-transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+	100%{
+	opacity: 0.3;
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.5);
+	}
+
+}
+
+@-ms-keyframes pulsate{
+
+  30%{
+	opacity: 1;
+	-ms-transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+
+	100%{
+	opacity: 0.3;
+	-ms-transform: translateX(-50%) translateY(-50%) scale(0.5);
+	}
+
+}
+
+/* ### Keyframe animations ### *//* ### Keyframe animations ### *//* ### Keyframe animations ### *//* ### Keyframe animations ### */
+
+.myform{
+	margin:10px;
+	width:400px;
+	padding:14px;
+}
+
+#stylized{
+	border:solid 2px #b7ddf2;
+	background:#ebf4fb;
+}
+#stylized h1 {
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:8px;
+	font-family:nanumgothic,dotum;
+
+}
+#stylized p{
+	font-size:11px;
+	color:#666666;
+	margin-bottom:20px;
+	border-bottom:solid 1px #b7ddf2;
+	padding-bottom:10px;
+	font-family:dotum;
+}
+#stylized label{
+	display:block;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+	float:left;
+	font-family:tahoma;
+}
+#stylized .small{
+	color:#666666;
+	display:block;
+	font-size:11px;
+	font-weight:normal;
+	text-align:right;
+	width:140px;
+	font-family:dotum;
+	letter-spacing:-1px;
+}
+#stylized input{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:200px;
+margin:2px 0 20px 10px;
+}
+#stylized button{
+	height: 26px;
+	width: 73px;
+	line-height:10px;
+text-decoration: none;
+padding: 4px 7px;
+margin-right: 5px;
+border: 1px solid #778;
+color: white;
+border:1px solid gray;
+background: #3282c2;
+border-radius: 8px; /*w3c border radius*/
+box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* w3c box shadow */
+-moz-border-radius: 8px; /* mozilla border radius */
+-moz-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* mozilla box shadow */
+background: -moz-linear-gradient(center top, #a4ccec, #72a6d4 25%, #3282c2 45%, #357cbd 85%, #72a6d4); /* mozilla gradient background */
+-webkit-border-radius: 8px; /* webkit border radius */
+-webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* webkit box shadow */
+background: -webkit-gradient(linear, center top, center bottom, from(#a4ccec), color-stop(25%, #72a6d4), color-stop(45%, #3282c2), color-stop(85%, #357cbd), to(#72a6d4)); /* webkit gradient background */
+}
+
+
+
+.gradientbuttons ul{
+padding: 3px 0;
+margin-left: 0;
+margin-top: 1px;
+margin-bottom: 0;
+font: bold 13px Verdana;
+list-style-type: none;
+text-align: center; /*set to left, center, or right to align the menu as desired*/
+}
+
+.gradientbuttons li{
+display: inline;
+margin: 0;
+}
+
+.gradientbuttons li a{
+
+line-height:10px;
+text-decoration: none;
+padding: 4px 7px;
+margin-right: 5px;
+border: 1px solid #778;
+color: white;
+border:1px solid gray;
+background: #3282c2;
+border-radius: 8px; /*w3c border radius*/
+box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* w3c box shadow */
+-moz-border-radius: 8px; /* mozilla border radius */
+-moz-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* mozilla box shadow */
+background: -moz-linear-gradient(center top, #a4ccec, #72a6d4 25%, #3282c2 45%, #357cbd 85%, #72a6d4); /* mozilla gradient background */
+-webkit-border-radius: 8px; /* webkit border radius */
+-webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.5); /* webkit box shadow */
+background: -webkit-gradient(linear, center top, center bottom, from(#a4ccec), color-stop(25%, #72a6d4), color-stop(45%, #3282c2), color-stop(85%, #357cbd), to(#72a6d4)); /* webkit gradient background */
+}
+
+.gradientbuttons li a:hover{
+color: lightyellow;
+}
+/* ### Keyframe animations ### *//* ### Keyframe animations ### *//* ### Keyframe animations ### *//* ### Keyframe animations ### */
+</style>
+
+<script>
+
+  document.createElement('nav')
+  
+  function legacybrowsertoggle(){
+    if (!document.getElementsByClassName){ // legacy browsers only
+      var mobilemenunav = document.getElementById("rightsidemenu")
+      if (mobilemenunav.style.visibility != 'visible')
+        mobilemenunav.style.visibility = 'visible'
+      else
+        mobilemenunav.style.visibility = 'hidden'
+    }
+  }
+  
+  </script>
+        <div class="frame">
+          <div class="header">
+                                           <!-- 메뉴들 -->
+                                           
+                                           <ul class="sonarmenu">
+												<li><a href="http://127.0.0.1:8080/ui6.html">Home</a></li>
+												<li><a href="http://tools.dynamicdrive.com">집,방 검색(아직)</a></li>
+												<li><a href="http://www.cssdrive.com">관심목록(아직)</a></li>
+												<li><a href="http://www.dynamicdrive.com/forums/">집,방 등록(아직)</a></li>
+												<li><a href="http://www.dynamicdrive.com/forums/">회원 검색(아직)</a></li>
+												<li><a href="http://127.0.0.1:8080/ui7.html">회원가입 및 로그인</a></li>
+                                              </ul>
+                                            
+            <div class="logo">Chang-eun pirate group</div>
+                               <!-- 체크박스(누르면 오른쪽 이벤트) -->
+                               <input type="checkbox" id="sidemenucheckbox" />
+
+                               <label id="sidemenutoggler" for="sidemenucheckbox" onClick="legacybrowsertoggle()">Toggle Menu</label>
+                               
+                               <nav id="rightsidemenu">
+                               
+                                 <ul>
+                                 <li><a href="http://192.168.0.68:8080/ui5.html">홈페이지 낙서방</a></li>
+                                 <li><a href="http://comic.naver.com/index.nhn">만화방</a></li>
+                                 <li><a href="https://www.youtube.com//">영상방</a></li>
+                                 <li><a href="http://dundam.xyz/view.jsp?server=hilder&name=%EC%A7%80%EC%BD%94&image=11f58acf8f87a681d86df2eb38911936/">게임방</a></li>
+                                 </ul>
+                               <label id="closex" for="sidemenucheckbox" onClick="legacybrowsertoggle()">Close</label>
+                               </nav>
+                                 
+                               <div class="overlay"><label for="sidemenucheckbox"></label></div>
+                               <p1>위에 누르고 싶지~? (궁서체)</p1>
+
+
+          </div>
+          <!-- //header -->
+          <div class="container">
+            <div class="nav">
+              <ul class="nav-list">
+                <li>7조 선원 소개</li>
+                <li class="nav-item"><a href="http://192.168.0.68:8080/최재영.html" class="nav-link">최재영</a></li>
+                <li class="nav-item"><a href="http://192.168.0.68:8080/김창은.html" class="nav-link">김창은</a></li>
+                <li class="nav-item"><a href="http://192.168.0.68:8080/홍인표.html" class="nav-link">홍인표</a></li>
+                <li class="nav-item"><a href="http://127.0.0.1:8080/김규태1.html" class="nav-link">김규태</a></li>
+                <li class="nav-item"><a href="http://127.0.0.1:8080/박도영.html" class="nav-link">박도영</a></li>
+              </ul>
+            </div>
+            <!-- //nav -->
+            <div class="content">
+			  <h1>가입 / 로그인</h1>
+			  <div id="stylized" class="myform">
+					<form id="form" name="form" method="post">
+					<h2>회원 가입 및 로그인</h2>
+					
+					<label>Name
+					<span class="small">이름 입력</span>
+					</label>
+					<input type="text" name="name" id="name" />
+					
+					<label>Password
+					<span class="small">패스워드 6자 이상</span>
+					</label>
+					<input type="text" name="password" id="password" />
+					
+
+
+					
+					<div class="spacer"></div>
+					
+					<div class="gradientbuttons">							
+							<ul>
+							<button type="button">로그인</button>
+							<li><a href="http://www.dynamicdrive.com">가입하기</a></li>
+							
+							</ul>
+							</div>
+					</form>
+					</div>
+              <p>
+                로그인해 아이디 없으면 회원가입 해
+              </p>
+            </div>
+          </div>
+          <!-- //container -->
+          <div class="footer">
+            <p class="copyright">&copy;Bit27 (7조)</p>
+            
+              
+          </div>
+          <!-- //footer -->
+        </div>
+        <!-- //frame -->
+            
+  </body>
 </html>
+
