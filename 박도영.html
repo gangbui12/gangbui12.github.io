@@ -441,13 +441,17 @@ a.css3dbutton:active {
 /* 헤더 메뉴들 */
 ul.sonarmenu{ /* Inspired by http://tympanus.net/codrops/2013/08/06/creative-link-effects */
 	list-style: none;
+  margin-left: 34%;
+  margin-top:-65px;
 }
+
 
 ul.sonarmenu li{
  display: inline;
 }
 
 ul.sonarmenu a{
+  text-shadow: 0 0 3px blue;
 	position: relative;
 	display: inline-block;
 	color: black; /* font color */
@@ -732,13 +736,14 @@ span.psw {
 
 /* Set a style for all buttons */
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+  text-shadow: 0 0 3px blue;
+    color: black;
+    padding: 15px;
+    margin: 17px 15px 15px 15px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50px;
+    height: 20px;
 }
 
 button:hover {
@@ -747,6 +752,19 @@ button:hover {
 
 .container2 {
     padding: 16px;
+}
+
+.myButton {
+    
+    background: url(/media/비트.png) no-repeat;
+    cursor:pointer;
+    width:70;
+    height:20;
+    border: none;
+    margin-top:20px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    
 }
 
 </style>
@@ -770,15 +788,18 @@ button:hover {
           <div class="header">
                                            <!-- 메뉴들 -->
                                            
+                                           <p>
+                                              <a href="http://192.168.0.68:8080/ui6.html"><input type="button" class="myButton"></a>
                                            <ul class="sonarmenu">
-                                              <li><a href="http://192.168.0.68:8080/ui6.html">Home</a></li>
-                                              <li><a href="http://tools.dynamicdrive.com">집,방 검색(아직)</a></li>
+                                              
+                                              <li><a href="http://naver.com">집,방 검색(아직)</a></li>
                                               <li><a href="http://www.cssdrive.com">관심목록(아직)</a></li>
                                               <li><a href="http://www.dynamicdrive.com/forums/">집,방 등록(아직)</a></li>
                                               <li><a href="http://www.dynamicdrive.com/forums/">회원 검색(아직)</a></li>
                                               <li><a href="http://192.168.0.68:8080/ui7.html">회원가입 및 로그인</a></li>
-                                              <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-                                            </ul>
+                                              <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">로그인</button>
+                                            </ul> 
+                                             </p>
                                               
                                             
                                               <div id="id01" class="modal">
