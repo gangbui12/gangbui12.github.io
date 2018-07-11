@@ -1,6 +1,5 @@
-@media screen and (min-width:900){
 body {
-  font-size: 100%;
+  font-size: 50px;
 }
 
 [data-theme*=_bgp] {
@@ -8,7 +7,7 @@ body {
   color: rgb(255, 255, 255);
   font-weight: bold;
   position: static;
-  padding: 0 0 0 145px;
+  padding: 0 0 0 183px;
   
 }
 
@@ -201,9 +200,9 @@ body.modern header .pi {
 
 [data-layout=_r] {
   /* max-width: 1800px; */
-  width: 100%;
+  width: 1200px;
   margin: 0;
-  padding: 0rem 0rem 16rem ;
+  padding: 0rem 0rem 13rem ;
   
 }
 [data-layout=_r] > div, [data-layout=_r] > article, [data-layout=_r] > aside {
@@ -307,8 +306,8 @@ label {
   }
 }
 input {
-  width: 60%;
-  position: absolute;
+
+
   right: 26.8%;
   font-size: 1em;
 }
@@ -459,8 +458,7 @@ textarea {
 }
 
 .MOD_MENU_Nav {
-  width: 100%;
-  
+  width: 800px;
   position: relative;
   
   
@@ -494,7 +492,7 @@ textarea {
   text-decoration: none;
   transition: background 0.3s;
   border-top: 1px solid white;
-  line-height: 0.25em;
+  line-height: 0.55em;
 
 }
 .MOD_MENU_Nav > ul li a:focus, .MOD_MENU_Nav > ul li a:hover, .MOD_MENU_Nav > ul li a:active {
@@ -554,6 +552,15 @@ textarea {
 
   
 }
+.pic{
+  height : 70px;
+  width :70px;
+  margin: 0;
+  border : 2px solid black;
+  background-size: cover;
+  background-position: center;
+}
+
 .subpic{
   height : 70px;
   width :70px;
@@ -586,7 +593,7 @@ textarea {
 }
 
 /* Menu Charlie */
-@media (min-width: 31.25em) {
+@media (min-width: 11.25em) {
   .MOD_MENU_Title {
     display: none;
   }
@@ -596,13 +603,13 @@ textarea {
     display: flex !important;
     flex-wrap: wrap;
     position: static;
-    width: 100%;
+    width: 700px;
     overflow: visible !important;
   }
   .MOD_MENU_Nav > ul:after {
     display: block;
     height: 1px;
-    width: calc(100% + 2em);
+    width: 700px;
     background: white;
     position: absolute;
     content: '';
@@ -610,7 +617,7 @@ textarea {
     left: -1em;
   }
   .MOD_MENU_Nav > ul li {
-    flex: 0 0 50%;
+   
     position: relative;
   }
   .MOD_MENU_Nav > ul li:nth-child(even) a {
@@ -623,7 +630,7 @@ textarea {
   .MOD_MENU_Nav > ul ul {
     position: absolute;
     z-index: 1;
-    width: 100%;
+    
     box-shadow: 0 0 10px;
   }
   .MOD_MENU_Nav > ul ul a {
@@ -644,10 +651,8 @@ textarea {
   }
 }
 /* Menu Delta */
-@media (min-width: 43.75em) {
-  .MOD_MENU_Nav > ul li {
-    flex: 0 0 33.3%;
-  }
+@media (min-width: 10.75em) {
+ 
   .MOD_MENU_Nav > ul li:nth-child(even) a {
     border-left: 1px solid white;
   }
@@ -659,7 +664,7 @@ textarea {
   }
 }
 /* Menu Echo */
-@media (min-width: 56.25em) {
+@media (min-width: 15.25em) {
   .MOD_MENU_Nav > ul {
     position: static;
   }
@@ -773,21 +778,11 @@ textarea {
   font-weight: normal;
 }
 
-/* Hero Charlie */
-@media (min-width: 31.25em) {
-  .MOD_HERO {
-    padding: 2rem 0;
-  }
-  .MOD_HERO h1 {
-    font-size: 3em;
-  }
-}
-/* Hero Echo */
-@media (min-width: 56.25em) {
+
   .MOD_HERO h1 {
     font-size: 4em;
   }
-}
+
 /* Footer1 */
 .MOD_FOOTER1 a {
   color: white;
@@ -1447,6 +1442,7 @@ textarea {
   padding: 0.6em;
   font-size: 1rem;
   margin: 0.4em 0 0;
+  
 }
 
 [data-layout=_r] .MOD_HEADER3_Content {
@@ -1510,12 +1506,12 @@ textarea {
   
 }
 .MOD_SUBNAVIGATION1_Menu ul {
-  width: 100%;
+  width: 200px;
   list-style: none;
 
   
   border-right: 2px solid black;
-  height: 100%;
+  height: 500px;
   
 }
 .MOD_SUBNAVIGATION1_Menu ul li a {
@@ -1525,7 +1521,7 @@ textarea {
   color: black;
   border-bottom: 2px solid black;
 
-  width: 55%;
+  width: 100px;
   margin: auto;
   text-align: center;
   font-weight:bold;
@@ -1735,8 +1731,24 @@ body .MOD_IMPACTSTRIP3_Txt p {
   font-size: 1.2em;
   padding: 0.5rem 2rem 0.5rem 2rem;
   margin: 2rem 9rem 0 9rem;
-
-
+}
+.paybtn{
+  border: 2px solid black;
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0.5rem 9rem 0.5rem 9rem;
+   margin: 0rem 0rem 0 34rem; 
+}
+.oknobtn{
+  border: 2px solid black;
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0.5rem 7rem 0.5rem 7rem;
+   margin: 0rem 2rem 0 13rem; 
 }
 .MOD_IMPACTSTRIP4_Img {
   background-size: cover;
@@ -1963,12 +1975,3 @@ nav.vertical li:hover > ul{
   opacity:1;
   transform: translateX(0px);
 }
-}
-/* 화면 전환의 시작 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* 화면 전환의 시작 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* 화면 전환의 시작 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* 화면 전환의 시작 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* 화면 전환의 시작 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* 화면 전환의 시작 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* 화면 전환의 시작 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
